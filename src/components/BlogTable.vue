@@ -5,6 +5,7 @@
         <tr>
           <th>ID</th>
           <th>Заголовок</th>
+          <th>Содержимое</th>
           <th>Автор</th>
           <th>Создано</th>
         </tr>
@@ -13,6 +14,7 @@
         <tr v-for="blog in blogs" :key="blog.id">
           <td>{{ blog.id }}</td>
           <td>{{ blog.title }}</td>
+          <td>{{ blog.content }}</td>
           <td>{{ blog.author }}</td>
           <td>{{ blog.created_at }}</td>
         </tr>
@@ -86,4 +88,27 @@ table th, table td {
   padding: 8px;
 }
 
+/* Селектор для первого столбца */
+table th:nth-child(1),
+table td:nth-child(1) {
+  width: 20px;
+}
+
+/* Селектор для второго столбца */
+table th:nth-child(2),
+table td:nth-child(2) {
+  width: 200px;
+}
+
+/* Селектор для третьего столбца */
+table th:nth-child(3),
+table td:nth-child(3) {
+  width: 500px;
+}
+
+/* Селектор для четвертого столбца */
+table th:nth-child(4),
+table td:nth-child(4) {
+  width: 50px;
+}
 </style>
